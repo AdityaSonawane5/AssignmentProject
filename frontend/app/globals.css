@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5f6f3;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(30, 36, 33, 0.035) 1px, transparent 0);
+  background-size: 24px 24px;
+  color: #1e2421;
+}
+
+/* Visible keyboard focus everywhere, not just default browser outline */
+:focus-visible {
+  outline: 2px solid #2f4b3c;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar, kept subtle */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccd1cb;
+  border-radius: 999px;
+}
