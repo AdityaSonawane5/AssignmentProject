@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+// MONGODB_URI is set in the .env file. See .env.example for an example.
 async function connectDB() {
   const uri = process.env.MONGODB_URI;
   if (!uri) {
